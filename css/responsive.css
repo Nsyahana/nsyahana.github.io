@@ -3,6 +3,7 @@
 		display:block !important;
 		height:auto !important;
 	}
+	
 }
 @media only screen and (max-width: 1440px) {
 	.welcome-title {
@@ -193,6 +194,7 @@
 	.contact-row {
 		margin: auto;
 		padding: 42px 45px;
+		
 	}
 }
 @media only screen and (max-width: 767px) {
@@ -302,6 +304,60 @@
 		margin-top: 60px;
 		text-align:center;
 	}
+	
+	/* ...existing code... */
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-item {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 0 24px 0; /* space between panels */
+  box-sizing: border-box;
+  background: rgba(250,250,250,0.25);
+  padding: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: max-width 0.5s ease, padding 0.5s ease;
+}
+
+/* Make iframe/video responsive inside testimonial-item */
+.testimonial-item iframe,
+.testimonial-item video {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 991px) {
+  .testimonial-item {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .testimonial-item iframe,
+  .testimonial-item video {
+    height: 220px;
+  }
+}
+
+@media (max-width: 575px) {
+  .testimonial-item {
+    padding: 10px;
+  }
+  .testimonial-item iframe,
+  .testimonial-item video {
+    height: 160px;
+  }
+}
+/* ...existing code... */
 	.testimonials-section {
 		padding-top:0;
 	}
@@ -431,4 +487,27 @@
 	.testimonial-content:before {
 		left: 43%;
 	}
+}
+
+/* Centralized responsive margin for .contact-row */
+@media only screen and (max-width: 991px) {
+  .contact-row {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 16px !important;
+    margin-bottom: 16px !important;
+    max-width: 420px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .contact-row {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    max-width: 95vw;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
 }
